@@ -13,3 +13,7 @@
 ## [0.0.1+3] - 11 June 2020
 
 * 'homepage' is added to package
+
+## [0.0.1+4] - 11 June 2020
+
+* dershub.com is to homepage property

@@ -1,8 +1,8 @@
 name: hive_listener
 description: A tiny widget to listen hive box changes
-version: 0.0.1+3
+version: 0.0.1+4
 repository: https://github.com/malibayram91/hive_listener
-homepage: https://github.com/malibayram91/hive_listener
+homepage: https://pub.dev/packages?q=publisher%3Adershub.com
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
