@@ -1,8 +1,8 @@
 name: hive_listener
-description: A tiny widget to listen hive box changes
-version: 0.0.2+1
+description: A tiny widget to listen hive box changes, using the ValueListenableBuilder with removing unnecessary parts of it, like context and child widget of it.
+version: 0.1.0
 repository: https://github.com/malibayram91/hive_listener
-homepage: https://pub.dev/packages?q=publisher%3Adershub.com
+homepage: https://github.com/malibayram91/hive_listener
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

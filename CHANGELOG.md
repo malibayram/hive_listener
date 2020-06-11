@@ -21,3 +21,7 @@
 ## [0.0.2+1] - 11 June 2020
 
 * dershub.com and year are added to licence
+
+## [0.1.0] - 11 June 2020
+
+* added more information to package description
