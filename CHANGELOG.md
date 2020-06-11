@@ -16,4 +16,8 @@
 
 ## [0.0.1+4] - 11 June 2020
 
-* dershub.com is to homepage property
+* dershub.com is added to homepage property
+
+## [0.0.2+1] - 11 June 2020
+
+* dershub.com and year are added to licence
