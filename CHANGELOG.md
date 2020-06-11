@@ -9,3 +9,7 @@
 ## [0.0.1+2] - 11 June 2020
 
 * 'How to use' is added to readme file
+
+## [0.0.1+3] - 11 June 2020
+
+* 'homepage' is added to package
