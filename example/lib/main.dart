@@ -12,7 +12,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HiveListener(
+    return HiveListener<dynamic>(
       box: Hive.box('settings'),
       keys: [
         'dark_theme'
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (box) {
         return MaterialApp(
           title: 'Flutter Demo',
-          theme: box.get('dark_theme', defaultValue: false)
+          theme: box.get('dark_theme', defaultValue: false)!
               ? ThemeData.dark()
               : ThemeData.light(),
           home: MyHomePage(title: 'Flutter Demo Home Page'),

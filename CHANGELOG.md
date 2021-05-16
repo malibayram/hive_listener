@@ -29,3 +29,7 @@
 ## [1.0.0] - 16 May 2021
 
 * migrated to null safety
+
+## [1.1.0] - 16 May 2021
+
+* migrated to null safety and used statefulwidget instead of valuelistenablebuilder
