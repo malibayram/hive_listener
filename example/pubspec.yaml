@@ -13,5 +13,5 @@ dependencies:
     sdk: flutter
   hive_listener:
     path: ../
-  hive: ^1.4.1+1
-  hive_flutter: ^0.3.0+2
+  hive: ^2.0.4
+  hive_flutter: ^1.0.0
