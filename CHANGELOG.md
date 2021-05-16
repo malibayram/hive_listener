@@ -25,3 +25,7 @@
 ## [0.1.0] - 11 June 2020
 
 * added more information to package description
+
+## [1.0.0] - 16 May 2021
+
+* migrated to null safety

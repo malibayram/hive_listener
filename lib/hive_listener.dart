@@ -6,10 +6,15 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class HiveListener extends StatelessWidget {
   final Box box;
-  final List<String> keys;
+  final List<String>? keys;
   final Widget Function(Box bx) builder;
 
-  const HiveListener({Key key, @required this.box, this.keys, @required this.builder}) : super(key: key);
+  const HiveListener({
+    Key? key,
+    required this.box,
+    this.keys,
+    required this.builder,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

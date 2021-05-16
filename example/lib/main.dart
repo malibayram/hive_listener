@@ -14,11 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return HiveListener(
       box: Hive.box('settings'),
-      keys: ['dark_theme'], // keys is optional to specify listening value changes
+      keys: [
+        'dark_theme'
+      ], // keys is optional to specify listening value changes
       builder: (box) {
         return MaterialApp(
           title: 'Flutter Demo',
-          theme: box.get('dark_theme', defaultValue: false) ? ThemeData.dark() : ThemeData.light(),
+          theme: box.get('dark_theme', defaultValue: false)
+              ? ThemeData.dark()
+              : ThemeData.light(),
           home: MyHomePage(title: 'Flutter Demo Home Page'),
         );
       },
@@ -27,16 +31,16 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final String title;
+  final String? title;
 
-  const MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key? key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Box settingsBox = Hive.box('settings');
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title!),
       ),
       body: Center(
         child: Column(
@@ -47,7 +51,9 @@ class MyHomePage extends StatelessWidget {
             ),
             HiveListener(
               box: settingsBox,
-              keys: ['counter'], // keys is optional to specify listening value changes
+              keys: [
+                'counter'
+              ], // keys is optional to specify listening value changes
               builder: (box) {
                 return Text(
                   '${box.get('counter', defaultValue: 0)}',
@@ -55,14 +61,15 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
-                bool darkTheme = settingsBox.get('dark_theme', defaultValue: false);
+                bool darkTheme =
+                    settingsBox.get('dark_theme', defaultValue: false);
                 settingsBox.put('dark_theme', !darkTheme);
               },
               child: Text("Switch Dark Theme"),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 settingsBox.put('counter', 0);
               },
