@@ -30,7 +30,7 @@ class _HiveListenerState<T> extends State<HiveListener<T>> {
 
   void _valueChanged() {
     _box = widget.box;
-    setState(() {});
+    if (mounted) setState(() {});
   }
 
   @override
@@ -44,7 +44,7 @@ class _HiveListenerState<T> extends State<HiveListener<T>> {
         _box = value;
         _boxOpened = _box.isOpen;
         _box.listenable(keys: widget.keys).addListener(_valueChanged);
-        setState(() {});
+        if (mounted) setState(() {});
       });
     }
 
@@ -63,6 +63,9 @@ class _HiveListenerState<T> extends State<HiveListener<T>> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.builder(_box);
+    if (_boxOpened)
+      return widget.builder(_box);
+    else
+      return Center(child: CircularProgressIndicator());
   }
 }

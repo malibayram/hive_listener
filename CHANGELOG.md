@@ -25,6 +25,7 @@
 ## [0.1.0] - 11 June 2020
 
 * added more information to package description
+* if you want to use without null safety, you can select this version
 
 ## [1.0.0] - 16 May 2021
 
@@ -33,3 +34,7 @@
 ## [1.1.0] - 16 May 2021
 
 * migrated to null safety and used statefulwidget instead of valuelistenablebuilder
+
+## [1.2.0] - 24 May 2021
+
+* added `CircularProgressIndicator` in case of box not opened.

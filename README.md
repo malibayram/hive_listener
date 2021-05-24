@@ -17,3 +17,5 @@ HiveListener(
   },
 )
  ```
+
+ - **note:** if you want to use without null safety, you can select 0.1.0 version
