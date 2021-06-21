@@ -38,3 +38,8 @@
 ## [1.2.0] - 24 May 2021
 
 * added `CircularProgressIndicator` in case of box not opened.
+
+## [1.2.1] - 21 June 2021
+
+* hive_flutter updated to 1.1.0
+* _box.isOpen changed to Hive.isBoxOpen(_box.name)

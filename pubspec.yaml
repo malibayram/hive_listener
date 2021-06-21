@@ -1,6 +1,6 @@
 name: hive_listener
 description: A tiny widget to listen hive box changes, using the ValueListenableBuilder with removing unnecessary parts of it, like context and child widget of it.
-version: 1.2.0
+version: 1.2.1
 repository: https://github.com/malibayram91/hive_listener
 homepage: https://github.com/malibayram91/hive_listener
 
@@ -11,4 +11,4 @@ dependencies:
   flutter:
     sdk: flutter
   hive: ^2.0.4
-  hive_flutter: ^1.0.0
+  hive_flutter: ^1.1.0

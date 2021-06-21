@@ -36,17 +36,16 @@ class _HiveListenerState<T> extends State<HiveListener<T>> {
   @override
   void initState() {
     _box = widget.box;
-    _boxOpened = _box.isOpen;
+    _boxOpened = Hive.isBoxOpen(_box.name);
     if (_boxOpened)
       _box.listenable(keys: widget.keys).addListener(_valueChanged);
-    else {
+    else
       Hive.openBox<T>(_box.name).then((value) {
         _box = value;
         _boxOpened = _box.isOpen;
         _box.listenable(keys: widget.keys).addListener(_valueChanged);
         if (mounted) setState(() {});
       });
-    }
 
     super.initState();
   }
